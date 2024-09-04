@@ -7,7 +7,7 @@ const App = () => {
   const[inputValue,setValue]=useState('');
   const[task,setTask]=useState([]);
   return (
-    <div>
+    <div id="main">
       <h1>To-Do List</h1>
       <input type='text' value={inputValue} onChange={(event)=>
         setValue(event.target.value)
@@ -30,7 +30,8 @@ const App = () => {
                 return element.id !== item.id
               })
               setTask(newArr)
-            }}>Delete</button>
+              setValue('')
+            }}></button>
           </li>
 
           })
