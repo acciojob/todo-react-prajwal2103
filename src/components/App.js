@@ -18,6 +18,7 @@ const App = () => {
           name:task
         }
         setTask([...task,newTodo])
+        setValue('')
 
       }}>Add Todo</button>
       <ul>
@@ -30,8 +31,8 @@ const App = () => {
                 return element.id !== item.id
               })
               setTask(newArr)
-              setValue('')
-            }}></button>
+              
+            }}>Delete</button>
           </li>
 
           })
